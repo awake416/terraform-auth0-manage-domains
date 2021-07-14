@@ -22,12 +22,9 @@ resource auth0_client aws_console_login_sso {
   oidc_conformant                     = false
   callbacks                           = [
     var.aws_sso_acs_url]
-  allowed_origins                     = [
-    var.allowed_origins]
-  allowed_logout_urls                 = [
-    var.allowed_logout_urls]
-  web_origins                         = [
-    var.web_origins]
+  allowed_origins                     = var.allowed_origins
+  allowed_logout_urls                 = var.allowed_logout_urls
+  web_origins                         = var.web_origins
   addons {
     samlp {
       audience                           = var.aws_sso_issuer

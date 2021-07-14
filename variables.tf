@@ -11,13 +11,13 @@ variable "aws_sso_acs_url" {}
 variable "aws_sso_issuer" {}
 
 variable "allowed_origins" {
-  default = null
+  default = []
 }
 variable "allowed_logout_urls" {
-  default = null
+  default = []
 }
 variable "web_origins" {
-  default = null
+  default = []
 }
 
 variable "saml_mappings" {
