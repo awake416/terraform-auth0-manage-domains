@@ -44,7 +44,7 @@ resource auth0_client aws_console_login_sso {
 }
 
 resource auth0_rule aws_role_assignment {
-  name    = "aws_role_assignment"
+  name    = "aws-role-assignment"
   script  = templatefile("${path.module}/aws_role_assignment.js", {
     account_id = data.aws_caller_identity.current.account_id
   })
